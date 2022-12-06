@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <!-- Lingua, Conjunto de Caracteres e Tamanho da Tela -->
+        <meta lang="pt-BR">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#00f">
+
+        <!-- Título, Descição e Autores do Site -->
+        <title>Human Robotics</title>
+        <meta name="description" content="Nós fazemos robôs.">
+        <meta
+            name="author"
+            content="Pragmata Serviços Criativos e Human Robotics"
+        />
+
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Icones do Site -->
+        <link rel="apple-touch-icon" href="logo/apple-icon-180.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+        <!-- Icones -->
+        <link rel="shortcut icon" href="assets/idv/logo-vanilla.png" type="image/x-icon" />
+        <link rel="icon" href="assets/idv/logo-vanilla.png" type="image/x-icon" />
+
+        <!-- Site Principal e Alternativos -->
+        <link rel="canonical" href="http://humanrobotics.com.br" />
+        <link
+            rel="alternate"
+            href="http://humanrobotics.com.br"
+            hreflang="en"
+        />
+
+        <!-- Keywords e Instruções para Web Crawlers -->
+        <meta
+            name="keywords"
+            content="human robotics, robótica humana, robótica, robôs, robôs humanos, robôs de atendimento, robôs brasileiros"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+
+        <!-- CSS Principal -->
+        <link rel="stylesheet" href="css/main.css" />
+        </script>
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Bootstrap core CSS e JS 
+        
+                    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        -->
+
+        <!-- ThreeJs e Globe 
+        <script src="//unpkg.com/three"></script>
+        <script src="//unpkg.com/globe.gl"></script>
+        -->
+
+        <!-- Popper JS Production version -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+        <!-- CSS Nativo -->
+        <link href="css/main.css" rel="stylesheet" />
+
+        <!-- Fontes do Google -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+            rel="stylesheet"
+        />
+
+        <!-- JS Nativo -->
+        <script src="js/loading.js"></script>
+        <script async src="js/lgpd.js"></script>
+        <script defer src="js/main.js"></script>
+        <script defer src="js/observers.js"></script>
+    </head>
+    <body class="body-overflow">
+        <!-- PWA Loader -->
+        <script>
+            // Don't register the service worker
+            // until the page has fully loaded
+            window.addEventListener('load', () => {
+              // Is service worker available?
+              if ('serviceWorker' in navigator) {
+              // Register a service worker hosted at the root of the
+             // site using the default scope.
+            navigator.serviceWorker.register('service-worker.js').then((registration) => {
+            console.log('Service worker registration succeeded:', registration);
+            }, /*catch*/ (error) => {
+            console.error(`Service worker registration failed: ${error}`);
+            });
+            
+            } else {
+            console.error('Service workers are not supported.');
+            }
+            });
+          </script>
+
+        <!-- Carregador de Página -->
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+
+        <!-- Banner LGPD -->
+        <div id="lgpd-cont" class="lgpd">
+            <p>
+                Este site utiliza cookies para melhorar sua experiência de
+                navegação.</p> 
+            <p>Ao continuar navegando, você concorda com a nossa
+                <a href="#">Política de Privacidade</a>.
+            </p>
+            <button id="lgpd-but" class="button-lgpd">OK</button>
+        </div>
+
+        <!-- Navbar -->
+        <div class="nav-container">
+            <!-- Logo Container -->
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <img src="assets/idv/logo-vanilla.png" alt="Human Robotics" />
+                </div>
+                <div class="logo-text"><p>Human Robotics</p></div>
+            </div>
+
+            <!-- Nav Primária -->
+            <nav class="nav-primary">
+                <ul>
+                    <li><a id="menu_anchor_01" href="#">Início</a></li>
+                    <li><a id="menu_anchor_02" href="#section-002-id">Produtos</a></li>
+                    <li><a id="menu_anchor_03" href="#section-003-id">Soluções</a></li>
+                    <li><a id="menu_anchor_04" href="#section-004-id">Experiência</a></li>
+                    <li><a id="menu_anchor_05" href="#section-005-id">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Div que Reserva 25% do espaço da Nav -->
+            <div class="menu-div">
+                <!-- Seletor de Idioma -->
+                <div class="lang-selector">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zm48 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z"/></svg>
+                
+                    <a class="lang-selected" href="index.html">PT</a>
+
+                    <div class="lang-divider"></div>
+                
+                    <a class="lang-unselected" href="index.html">EN</a>
+                </div>
+
+                <!-- Botão Burger -->
+                <div id="burger01" class="burger-class">
+                    <div class="burger_line1"></div>
+                    <div class="burger_line2"></div>
+                    <div class="burger_line3"></div>
+                </div>
+            </div>
+
+            <!-- Nav Secundária -->
+            <nav id="nav-secondary-id" class="nav-secondary">
+                <ul>
+                    <li><a href="#">AI Studio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Configurações e Permissões</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Conteúdo Principal -->
+        <main>
+            <!-- Video de Entrada -->
+            <section id="section-001-id" class="section-001-class section-observe">
+                <div class="header-text section-text">
+                    <h1>Nós <br> Fazemos <br> Robôs.</h1>
+                </div>
+
+                <div class="video-controller-container">
+                    <button id="video-ctrl-01-id" class="video-play-button video-ctrl-01-class">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                    </button>
+
+                    <button class="video-pause-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></svg>
+                        </svg>
+                    </button>
+
+                    <button class="video-unmute-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>
+                    </button>
+
+                    <button class="video-mute-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </button>
+                </div>
+
+                <div class="video-overlay"></div>
+                <div class="video-container">
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        src="assets/videos/Robios_Apresentacao.mp4"
+                    ></video>
+                </div>
+            </section>
+
+            <!-- Produtos, Sistema Operacional e Aplicativos -->
+            <section id="section-002-id" class="section-002-class section-observe">
+                <div class="product-text section-text">
+                    <h1>Produtos</h1>
+                    <h2>Robôs, Softwares e Aplicativos.</h2>
+                </div>
+
+                <div class="product-buttons">
+
+                    <!-- 
+                    <div id="tooltip-2" class="tooltips" role="tooltip">
+                        Anterior
+                    </div>
+                     -->
+
+                    <button id="prod-anchor-2" aria-describedby="tooltip">
+                        <svg
+                            class="product-button-icon-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0
+                            256 512"
+                        >
+                            <path
+                                d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                            />
+                        </svg>
+                    </button>
+
+                    <!--
+                    <div id="tooltip-1" class="tooltips" role="tooltip">
+                        Próximo
+                    </div>
+                    -->
+
+                    <button id="prod-anchor-1" aria-describedby="tooltip">
+                        <svg
+                            class="product-button-icon-2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 256 512"
+                        >
+                            <path
+                                d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="product-wrapper">
+                    <div id="prod-container-1" class="product-container">
+                        <div id="prod-card-1" class="product-card p-card-1">
+                            <div class="product-card-front">
+                                <div class="product-info">
+                                    <h2>RobiOS</h2>
+                                    <h3>Sistema Operacional Robótico</h3>
+                                </div>
+                                <img
+                                    src="assets/imgs/robiOS/HumanRobotics_RobIOS_01_20221110.png"
+                                    alt="Sistema Operacional Robios"
+                                />
+                                <button id="flip-btn-1">Saiba Mais!</button>
+                            </div>
+                            <div class="product-card-back">
+                                <h3>
+                                    RobiOS <br />
+                                    Especificações
+                                </h3>
+
+                                <p>
+                                    Tenha acesso a todas as aplicações do RobiOS em qualquer dispositivo 
+                                    Android por meio do Avatar, o software exclusivo da Human Robotics! 
+                                    Ideal para recepções, autoatendimentos simples, varejo e para auxiliar 
+                                    profissionais da saúde durante os atendimentos e consultas.
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        Disponível em todos os dispositivos Android
+                                    </li>
+                                    <li>Sensor de Presença</li>
+                                    <li>Alto Falantes HiFi</li>
+                                    <li>Tela de 11 Polegadas</li>
+                                </ul>
+                                <div class="product-btn-wrapper">
+                                    <button id="flip-back-btn-1" class="btn-flip-back">
+                                        Voltar
+                                    </button>
+                                    <button class="btn-buy">
+                                        $ Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prod-card-2" class="product-card">
+                            <div class="product-card-front">
+                                <div class="product-info">
+                                    <h2>RobiOS+TOTEM</h2>
+                                    <h3>Atendimento Inteligente</h3>
+                                </div>
+                                <img
+                                    src="assets/imgs/totem/HumanRobotics_RobiosTotem_01_20221110.553.png"
+                                    alt="Robios + TOTEM"
+                                />
+                                <button id="flip-btn-2">Saiba Mais!</button>
+                            </div>
+                            <div class="product-card-back">
+                                <h3>
+                                    RobiOS+TOTEM <br />
+                                    Especificações
+                                </h3>
+
+                                <p>
+                                    O Totem é a versão estática do Robios. Com interações divertidas 
+                                    e personalizadas, é ideal para recepções e autoatendimentos simples, 
+                                    passando informações e coletando dados necessários de seus clientes, 
+                                    bem como pesquisas de NPS.
+                                </p>
+
+                                <ul>
+                                    <li>Câmera 1080p</li>
+                                    <li>Alto Falantes HiFi</li>
+                                    <li>Tela de 11 Polegadas</li>
+                                    <li>Reconhecimento de Voz e Diálogo</li>
+                                    <li>Plataforma Aberta e Programável</li>
+                                    <li>Autonomia de 18 Horas</li>
+                                </ul>
+                                <div class="product-btn-wrapper">
+                                    <button id="flip-back-btn-2" class="btn-flip-back">
+                                        Voltar
+                                    </button>
+                                    <button class="btn-buy">
+                                        $ Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prod-card-3" class="product-card">
+                            <div class="product-card-front">
+                                <div class="product-info">
+                                    <h2>RobiOS+GO</h2>
+                                    <h3>Robô Autônomo Modular</h3>
+                                </div>
+                                <img 
+                                    class="robios-go-img"
+                                    src="assets/imgs/Quest/HumanRobotics_RobiosGo_20221110.png"
+                                    alt="Robios + QUEST"
+                                />
+                                <button id="flip-btn-3">Saiba Mais!</button>
+                            </div>
+                            <div class="product-card-back">
+                                <h3>
+                                    RobiOS+GO <br />
+                                    Especificações
+                                </h3>
+
+                                <p>
+                                    O Robios Go é um robô social, com navegação autônoma, telepresença 
+                                    e interações personalizadas. Ideal para todos os segmentos, incluindo 
+                                    eventos corporativos, não depende de conexão com a internet para 
+                                    executar a maior parte de suas funções.
+                                </p>
+
+                                <ul>
+                                    <li>LIDAR</li>
+                                    <li>Sensores Ultrassônicos</li>
+                                    <li>2 Câmeras com Lente Fisheye</li>
+                                    <li>Alto Falantes HiFi</li>
+                                    <li>Tela de 11 Polegadas</li>
+                                    <li>Reconhecimento de Voz e Diálogo</li>
+                                    <li>Plataforma Aberta e Programável</li>
+                                    <li>Autonomia de 8 Horas</li>
+                                </ul>
+                                <div class="product-btn-wrapper">
+                                    <button id="flip-back-btn-3" class="btn-flip-back">
+                                        Voltar
+                                    </button>
+                                    <button class="btn-buy">
+                                        $ Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soluções para Indústria, Varejo, Saúde e Eventos -->
+            <section id="section-003-id" class="section-003-class section-observe">
+                <div class="solution-text section-text">
+                    <h1>Soluções</h1>
+                    <h2>
+                        <a
+                            id="anchor-1"
+                            class="solution-active"
+                            href="#video-industria"
+                            >Indústria</a
+                        >
+                    </h2>
+                    <h2>
+                        <a id="anchor-2" href="#video-varejo">Varejo</a>
+                    </h2>
+                    <h2>
+                        <a id="anchor-3" href="#video-saude">Saúde</a>
+                    </h2>
+                    <h2>
+                        <a id="anchor-4" href="#video-eventos">Eventos</a>
+                    </h2>
+                </div>
+
+                <div class="video-controller-container">
+                    <button id="video-ctrl-05-id" class="video-play-button video-ctrl-01-class">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                    </button>
+
+                    <button class="video-pause-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></svg>
+                        </svg>
+                    </button>
+
+                    <button class="video-unmute-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>
+                    </button>
+
+                    <button class="video-mute-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </button>
+                </div>
+                <div class="video-overlay"></div>
+                <div id="video-container-01" class="video-container">
+                    <video
+                        id="video-industria"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        src="assets/videos/Robios_Evento.mp4"
+                    ></video>
+                    <video
+                        id="video-varejo"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        src="assets/videos/Robios_Apresentacao.mp4"
+                    ></video>
+                    <video
+                        id="video-saude"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        src="assets/videos/Robios_Evento.mp4"
+                    ></video>
+                    <video
+                        id="video-eventos"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        src="assets/videos/Robios_Apresentacao.mp4"
+                    ></video>
+                </div>
+            </section>
+
+            <!-- Experiência (Projetos Já Realizados e Clientes) -->
+            <section id="section-004-id" class="section-004-class side-faders section-observe">
+                <!-- 1o Container com as Imagens -->
+                <div class="scroll-container scroll1">
+                    <!-- 10 Itens -->
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+
+                    <!-- 10 Itens Duplicados para efeito infinito -->
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                </div>
+
+                <div class="experience-text section-text">
+                    <h1>Experiência</h1>
+                    <h2>Conheça nossos projetos e nossos parceiros.</h2>
+                </div>
+
+                <!-- 2o Container com as Imagens -->
+                <div class="scroll-container scroll2">
+                    <!-- 10 Itens -->
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+
+                    <!-- 10 Itens Duplicados para efeito infinito -->
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                    <div class="scroll-item"></div>
+                </div>
+            </section>
+
+            <!-- Contato (email, telefone, localização e newsletter) -->
+            <section id="section-005-id" class="section-005-class section-observe">
+                <div class="contact-text section-text">
+                    <h1>Contato</h1>
+                    <h2>
+                        Juntos descobriremos como a Robótica pode somar com seu
+                        negócio!
+                    </h2>
+                </div>
+
+                <div class="form-container">
+                    <form id="form" action="index.html" method="post">
+                        <input
+                            type="text"
+                            placeholder="Nome"
+                            required
+                            class="first-input"
+                        />
+                        <input type="email" placeholder="E-mail" required />
+                        <input type="text" placeholder="Telefone" required />
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            placeholder="Mensagem"
+                            required
+                        ></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="section-006-id" class="section-006-class">
+                <div class="contact-text section-text">
+                    <h1>FAQ</h1>
+                    <h2>
+                        Algumas informações relevantes sobre nossos Produtos, Serviços e Empresa.
+                    </h2>
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <!-- Icones das Mídias Sociais -->
+            <div class="social-media-icons">
+                <a href="#">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                    >
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                        />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                        />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                        />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Direitos Autorais do Site -->
+            <div class="direitos-reservados">
+                <p>© 2023 Human Robotics. Todos os direitos reservados.</p>
+            </div>
+
+            <!-- Website Pragmata -->
+            <div class="desenvolvido-por">
+                <p>Webdesign por <a href="#">Pragmata</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
