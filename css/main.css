@@ -393,7 +393,6 @@ body {
 }
 
 /* logo */
-
 .logo-container {
     display: flex;
     flex-direction: row;
@@ -478,7 +477,6 @@ body {
 }
 
 /* burger styling */
-
 .burger-class {
     display: flex;
     flex-direction: column;
@@ -538,7 +536,6 @@ body {
 }
 
 /* ===== Conteúdo ==== */
-
 .tooltips {
     background-color: white;
     color: var(--color-tertiary);
@@ -592,82 +589,37 @@ section {
     overflow: hidden;
 }
 
-.side-faders::before,
-.side-faders::after {
-    content: "";
-    display: block;
+.section-text {
+    z-index: 3;
+    text-align: left;
 
     position: absolute;
 
-    width: 20vw;
-    height: 100%;
-
-    background-image: linear-gradient(
-        90deg,
-        var(--color-tertiary) 30%,
-        var(--color-tertiary-faded) 60%,
-        transparent 100%
-    );
-
-    pointer-events: none;
-}
-
-.side-faders::before {
-    left: 0;
-    top: 0;
-
-    z-index: 2;
-}
-
-.side-faders::after {
-    right: 0;
-    top: 0;
-
-    z-index: 2;
-
-    transform: rotate(180deg);
-}
-
-.section-text {
-    z-index: 2;
-    position: static;
-    text-align: left;
-
-    position: relative;
-
     width: 33vw;
+    height: auto;
+}
+
+.section-text h1,
+.section-text h2 {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    margin-left: var(--main-nav-height);
+
+    color: white;
+    width: 100%;
+    height: auto;
 }
 
 .section-text h1 {
     font-size: 20vh;
     font-weight: 700;
-    color: white;
-
-    position: relative;
-
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    margin-left: var(--main-nav-height);
-
-    width: auto;
-    height: fit-content;
 }
 
 .section-text h2 {
     font-size: 7vh;
     font-weight: 500;
-    color: white;
-
-    position: relative;
-
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    margin-left: var(--main-nav-height);
-
-    width: auto;
-    height: fit-content;
 }
 
 .video-controller-container {
@@ -715,11 +667,51 @@ section {
     transform: translateX(1.5px);
 }
 
-/* ===== Seção 1 ==== */
+.side-faders::before,
+.side-faders::after {
+    content: "";
+    display: block;
 
+    position: absolute;
+
+    width: 20vw;
+    height: 100%;
+
+    background-image: linear-gradient(
+        90deg,
+        var(--color-tertiary) 30%,
+        var(--color-tertiary-faded) 60%,
+        transparent 100%
+    );
+
+    pointer-events: none;
+}
+
+.side-faders::before {
+    left: 0;
+    top: 0;
+
+    z-index: 2;
+}
+
+.side-faders::after {
+    right: 0;
+    top: 0;
+
+    z-index: 2;
+
+    transform: rotate(180deg);
+}
+
+/* ===== Seção 1 ==== */
 .section-001-class {
     border-radius: 20px;
     overflow: hidden;
+}
+
+.header-text {
+    top: 10vh;
+    left: 0;
 }
 
 .section-001-class .video-container {
@@ -769,44 +761,48 @@ section {
     scroll-snap-align: start;
 }
 
-.header-text {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, 0);
-
-    text-align: left;
-
-    width: 100%;
-    height: 100%;
-}
-
-.header-text h1 {
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    margin-left: var(--main-nav-height);
-
-    width: auto;
-    height: fit-content;
-
-    font-size: 8vw;
-    font-weight: 700;
-    line-height: 10vw;
-    color: white;
-
-    overflow: hidden;
-}
-
 /* ==== Seção 2 ===== */
 
-/* é preciso reconstruir esta classe, ela poderia envolver o product container e
-   entao poderia abraçar os dois side-faders2 de maneira mais responsiva */
+.product-text {
+    position: absolute;
+
+    top: 5%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.product-text h1,
+.product-text h2 {
+    position: static;
+    width: auto;
+
+    margin-left: 5vh;
+
+    color: white;
+}
+
+.product-text h1 {
+    font-size: 10vh;
+    font-weight: 700;
+}
+
+.product-text h2 {
+    font-size: 5vh;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 1vh;
+    margin-left: 5vh;
+
+    opacity: 60%;
+}
+
 .product-wrapper {
     width: 100%;
     height: 100%;
@@ -820,6 +816,8 @@ section {
 
     position: relative;
 }
+
+/* Backup do Product Buttons
 
 .product-buttons {
     z-index: 4;
@@ -838,43 +836,13 @@ section {
     bottom: calc(50% - 3vh);
 }
 
-/* Corrigir Side Faders após arrumar o product-wrapper */
-.side-faders2::before,
-.side-faders2::after {
-    content: "";
-    display: block;
+*/
 
-    position: absolute;
-
-    width: 5vw;
-    height: 80%;
-
-    background-image: linear-gradient(
-        90deg,
-        var(--color-tertiary) 60%,
-        var(--color-tertiary-faded) 70%,
-        transparent 100%
-    );
-
-    pointer-events: none;
+.product-buttons {
+    display: none;
 }
 
-.side-faders2::before {
-    left: 49.5vw;
-
-    z-index: 3;
-}
-
-.side-faders2::after {
-    right: 17vw;
-
-    z-index: 2;
-
-    transform: rotate(180deg);
-}
-
-/*
-Backup do product-container
+/* Backup do product-container
 
 .product-container {
     z-index: 2;
@@ -904,7 +872,29 @@ Backup do product-container
 */
 
 .product-container {
-    display: none;
+    z-index: 2;
+
+    position: absolute;
+    left: 10vw;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    width: calc((var(--card-width) + 2vw) * 3);
+    height: 80%;
+
+    overflow-y: visible;
+    overflow-x: scroll;
+
+    scroll-snap-type: x mandatory;
+
+    box-shadow: inset 0 5px 5px 5px var(--color-tertiary);
+    background-color: transparent;
+    perspective: 3500px;
 }
 
 .product-buttons button {
@@ -1146,60 +1136,45 @@ Backup do product-container
     pointer-events: none;
 }
 
-/** ===== Seção 3 ===== */
-
-.section-003-class {
-    border-radius: 20px;
-}
-
-.section-003-class .video-overlay {
-    z-index: 1;
-
-    width: 100%;
-    height: 100%;
-
-    top: 0;
-    left: 0;
+/* Corrigir Side Faders após arrumar o product-wrapper */
+.side-faders2::before,
+.side-faders2::after {
+    content: "";
+    display: block;
 
     position: absolute;
 
-    background-color: white;
-    filter: contrast(20%) opacity(50%);
+    width: 5vw;
+    height: 80%;
+
+    background-image: linear-gradient(
+        90deg,
+        var(--color-tertiary) 60%,
+        var(--color-tertiary-faded) 70%,
+        transparent 100%
+    );
 
     pointer-events: none;
 }
 
-.section-003-class .video-container {
-    width: 100%;
-    height: 100%;
+.side-faders2::before {
+    left: 49.5vw;
 
-    position: relative;
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-items: center;
-    justify-content: start;
-
-    overflow: auto;
-    overflow-x: scroll;
-
-    scroll-snap-type: start;
-    scroll-behavior: smooth;
+    z-index: 3;
 }
 
-.section-003-class .video-container::-webkit-scrollbar {
-    display: none;
+.side-faders2::after {
+    right: 17vw;
+
+    z-index: 2;
+
+    transform: rotate(180deg);
 }
 
-.section-003-class video {
-    width: 100%;
-    height: 100%;
+/** ===== Seção 3 ===== */
 
-    flex-shrink: 0;
-
-    scroll-snap-type: start;
-    object-fit: cover;
+.section-003-class {
+    border-radius: 20px;
 }
 
 .solution-text {
@@ -1254,6 +1229,56 @@ Backup do product-container
 .solution-active::before {
     width: 300px !important;
     transition: width 0.3s !important;
+}
+
+.section-003-class .video-overlay {
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+
+    background-color: white;
+    filter: contrast(20%) opacity(50%);
+
+    pointer-events: none;
+}
+
+.section-003-class .video-container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: start;
+
+    overflow: auto;
+    overflow-x: scroll;
+
+    scroll-snap-type: start;
+    scroll-behavior: smooth;
+}
+
+.section-003-class .video-container::-webkit-scrollbar {
+    display: none;
+}
+
+.section-003-class video {
+    width: 100%;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    scroll-snap-type: start;
+    object-fit: cover;
 }
 
 /* ===== Seção 4 ===== */
@@ -1569,11 +1594,28 @@ footer {
     .section-text {
         z-index: 2;
         position: absolute;
-        top: 50%;
+        top: 0;
+
         left: 50%;
-        transform: translate(-50%, -50%);
+        right: 50%;
+        transform: translate(-50%, 0);
+
         text-align: left;
-        width: 80vw;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-text h1 {
+        font-size: 5vh;
+        font-weight: 700;
+        color: white;
+    }
+
+    .section-text h2 {
+        font-size: 3vh;
+        font-weight: 700;
+        color: white;
     }
 
     .product-text {
@@ -1622,18 +1664,6 @@ footer {
         width: 45%;
         border: 1px solid var(--color-tertiary);
         color: var(--color-tertiary);
-    }
-
-    .section-text h1 {
-        font-size: 5vh;
-        font-weight: 700;
-        color: white;
-    }
-
-    .section-text h2 {
-        font-size: 3vh;
-        font-weight: 700;
-        color: white;
     }
 
     .nav-primary {
