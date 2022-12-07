@@ -620,6 +620,8 @@ section {
 .section-text h2 {
     font-size: 7vh;
     font-weight: 500;
+
+    opacity: 60%;
 }
 
 .video-controller-container {
@@ -652,6 +654,15 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.video-controller-container button:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.video-controller-container button:hover svg {
+    fill: white;
 }
 
 .video-controller-container svg {
@@ -817,31 +828,6 @@ section {
     position: relative;
 }
 
-/* Backup do Product Buttons
-
-.product-buttons {
-    z-index: 4;
-    position: absolute;
-
-    width: calc(var(--card-width) + 14vh);
-    height: auto;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: space-between;
-
-    right: 17.5vw;
-    bottom: calc(50% - 3vh);
-}
-
-*/
-
-.product-buttons {
-    display: none;
-}
-
 /* Backup do product-container
 
 .product-container {
@@ -895,6 +881,31 @@ section {
     box-shadow: inset 0 5px 5px 5px var(--color-tertiary);
     background-color: transparent;
     perspective: 3500px;
+}
+
+/* Backup do Product Buttons
+
+.product-buttons {
+    z-index: 4;
+    position: absolute;
+
+    width: calc(var(--card-width) + 14vh);
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    right: 17.5vw;
+    bottom: calc(50% - 3vh);
+}
+
+*/
+
+.product-buttons {
+    display: none;
 }
 
 .product-buttons button {
@@ -964,55 +975,6 @@ section {
     border-radius: 10px;
 }
 
-.product-info {
-    position: absolute;
-    top: 4vh;
-
-    text-align: center;
-    color: white;
-}
-
-.product-info h2 {
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.product-info h3 {
-    font-size: 24px;
-    font-weight: 200;
-}
-
-.product-card button {
-    position: absolute;
-    bottom: 2vh;
-
-    width: 50%;
-    height: 5vh;
-
-    border: 1px solid white;
-    border-radius: 10px;
-
-    background-color: transparent;
-    color: white;
-    font-size: 24px;
-    font-weight: 200;
-
-    transition: background-color 0.2s ease-in-out;
-}
-
-.product-card button:hover,
-.product-card button:focus {
-    border: 1px solid white;
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    background-color: white;
-    color: var(--color-tertiary);
-    font-size: 24px;
-    font-weight: 200;
-}
-
 .product-card-front,
 .product-card-back {
     position: absolute;
@@ -1035,6 +997,55 @@ section {
 
 .product-card-front {
     background-color: var(--color-tertiary-light);
+}
+
+.product-info {
+    position: absolute;
+    top: 4vh;
+
+    text-align: center;
+    color: white;
+}
+
+.product-card-front h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.product-card-front h3 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.product-card-front button {
+    position: absolute;
+    bottom: 2vh;
+
+    width: 50%;
+    height: 5vh;
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    font-weight: 200;
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.product-card-front button:hover,
+.product-card-front button:focus {
+    border: 1px solid white;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background-color: white;
+    color: var(--color-tertiary);
+    font-size: 24px;
+    font-weight: 200;
 }
 
 .product-card-back {
@@ -1070,11 +1081,50 @@ section {
     font-weight: 200;
 }
 
-.product-card-back button {
+.product-btn-wrapper {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    width: 80%;
+    height: auto;
+
+    bottom: 2vh;
+}
+
+.product-card-back button,
+.product-card-back a {
     position: relative;
-    width: 33%;
+    width: 40%;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
     border: 1px solid var(--color-tertiary);
     color: var(--color-tertiary);
+
+    font-size: 20px;
+
+    border-radius: 10px;
+}
+
+.btn-flip-back:hover {
+    cursor: pointer;
+    background-color: var(--color-tertiary-light) !important;
+    color: white !important;
+}
+
+.btn-buy:hover {
+    background-color: var(--color-secondary) !important;
+    color: white !important;
 }
 
 .product-card img {
@@ -1097,31 +1147,6 @@ section {
 
 .robios-go-img {
     transform: translateX(-15px);
-}
-
-.product-btn-wrapper {
-    position: absolute;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: space-around;
-
-    width: 100%;
-    height: auto;
-
-    bottom: 2vh;
-}
-
-.btn-flip-back:hover {
-    background-color: var(--color-tertiary-light) !important;
-    color: white !important;
-}
-
-.btn-buy:hover {
-    background-color: var(--color-secondary) !important;
-    color: white !important;
 }
 
 .card-active {
@@ -1360,11 +1385,21 @@ section {
     left: 5vw;
     text-align: left;
 
-    width: 50vw;
+    width: 40vw;
+}
+
+.contact-text h1 {
+    margin: 0;
+}
+
+.contact-text h2 {
+    margin: 0;
+    opacity: 60%;
 }
 
 .form-container {
     position: absolute;
+    top: 25vh;
     right: 10vw;
 
     display: flex;
@@ -1441,6 +1476,93 @@ form option {
     opacity: 0.5;
     background-color: white;
     font-size: 14px;
+}
+
+.contato-whats {
+    width: 100%;
+    height: 100px;
+
+    border-radius: 20px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2vh;
+    padding: 1vw;
+
+    color: var(--color-tertiary);
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.contato-whats svg {
+    width: auto;
+    height: 80%;
+
+    fill: var(--color-tertiary);
+
+    margin-right: 1vw;
+}
+
+.contato-whats p {
+    font-size: 16px;
+    font-weight: 400;
+
+    text-transform: none;
+}
+
+.contato-whats:hover {
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+/* ===== Seção 6 ===== */
+
+.sobre-text {
+    width: 80vw;
+}
+
+/* ===== Seção 7 ===== */
+
+.accordion-wrapper {
+    position: absolute;
+    top: 27.5vh;
+    right: 10vw;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    height: 50%;
+    width: 40vw;
+
+    color: white;
+}
+
+.accordion-wrapper hr {
+    width: 100%;
+    height: 1px;
+
+    background-color: white;
+    opacity: 0.5;
+}
+
+.accordion-wrapper .container {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.accordion-wrapper .label {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 1vh;
 }
 
 /* ===== Rodapé ===== */
