@@ -8,5 +8,6 @@ workbox.setConfig({
 
 workbox.routing.registerRoute(
     ({ request }) => request.destination === "image",
+    ({ request }) => request.destination === "video",
     new workbox.strategies.CacheFirst()
 );
