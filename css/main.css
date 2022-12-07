@@ -9,7 +9,7 @@
     --color-tertiary-faded: rgba(5, 20, 80, 0.502);
 
     --main-nav-height: 5vh;
-    --secondary-nav-height: 95vh;
+    --secondary-nav-height: 90vh;
 
     --footer-height: 5vh;
 
@@ -714,6 +714,27 @@ section {
     transform: rotate(180deg);
 }
 
+.side-overlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40%;
+    height: 100%;
+
+    background-image: linear-gradient(
+        90deg,
+        var(--color-tertiary) 50%,
+        var(--color-tertiary-faded) 80%,
+        transparent 100%
+    );
+
+    filter: contrast(80%) opacity(80%);
+
+    pointer-events: none;
+}
+
 /* ===== Seção 1 ==== */
 .section-001-class {
     border-radius: 20px;
@@ -1161,7 +1182,7 @@ section {
     pointer-events: none;
 }
 
-/* Corrigir Side Faders após arrumar o product-wrapper */
+/* Corrigir Side Faders após arrumar o product-wrapper 
 .side-faders2::before,
 .side-faders2::after {
     content: "";
@@ -1195,6 +1216,7 @@ section {
 
     transform: rotate(180deg);
 }
+*/
 
 /** ===== Seção 3 ===== */
 
@@ -1203,7 +1225,7 @@ section {
 }
 
 .solution-text {
-    top: 20vh;
+    top: 10vh;
     left: 5vw;
     text-align: left;
 
@@ -1214,8 +1236,8 @@ section {
     text-transform: capitalize;
 }
 
-.solution-text a:hover,
-.solution-text a:focus {
+.solution-text h2:hover,
+.solution-text h2:focus {
     color: blueviolet;
 }
 
@@ -1224,8 +1246,8 @@ section {
     position: relative;
 }
 
-.solution-text a::before,
-.solution-text a::after {
+.solution-text h2::before,
+.solution-text h2::after {
     content: "";
     display: block;
 
@@ -1241,17 +1263,18 @@ section {
     transition: width 0.3s;
 }
 
-.solution-text a:hover::before,
-.solution-text a:focus::before {
+.solution-text h2:hover::before,
+.solution-text h2:focus::before {
     width: 300px;
     transition: width 0.3s;
 }
 
-.solution-active {
+.solution-active h2 {
     color: blueviolet;
+    opacity: 100% !important;
 }
 
-.solution-active::before {
+.solution-active h2::before {
     width: 300px !important;
     transition: width 0.3s !important;
 }
