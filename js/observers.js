@@ -5,6 +5,8 @@ const menu_anchor_02 = document.getElementById("menu_anchor_02");
 const menu_anchor_03 = document.getElementById("menu_anchor_03");
 const menu_anchor_04 = document.getElementById("menu_anchor_04");
 const menu_anchor_05 = document.getElementById("menu_anchor_05");
+const menu_anchor_06 = document.getElementById("menu_anchor_06");
+const menu_anchor_07 = document.getElementById("menu_anchor_07");
 
 const sections = document.querySelectorAll(".section-observe");
 
@@ -25,6 +27,8 @@ const section1_observer = new IntersectionObserver(function (
             menu_anchor_03.classList.remove("nav-item-active");
             menu_anchor_04.classList.remove("nav-item-active");
             menu_anchor_05.classList.remove("nav-item-active");
+            menu_anchor_06.classList.remove("nav-item-active");
+            menu_anchor_07.classList.remove("nav-item-active");
         }
     });
 },
@@ -43,6 +47,8 @@ const section2_observer = new IntersectionObserver(function (
             menu_anchor_03.classList.remove("nav-item-active");
             menu_anchor_04.classList.remove("nav-item-active");
             menu_anchor_05.classList.remove("nav-item-active");
+            menu_anchor_06.classList.remove("nav-item-active");
+            menu_anchor_07.classList.remove("nav-item-active");
         }
     });
 },
@@ -61,6 +67,8 @@ const section3_observer = new IntersectionObserver(function (
             menu_anchor_02.classList.remove("nav-item-active");
             menu_anchor_04.classList.remove("nav-item-active");
             menu_anchor_05.classList.remove("nav-item-active");
+            menu_anchor_06.classList.remove("nav-item-active");
+            menu_anchor_07.classList.remove("nav-item-active");
         }
     });
 },
@@ -79,6 +87,8 @@ const section4_observer = new IntersectionObserver(function (
             menu_anchor_02.classList.remove("nav-item-active");
             menu_anchor_03.classList.remove("nav-item-active");
             menu_anchor_05.classList.remove("nav-item-active");
+            menu_anchor_06.classList.remove("nav-item-active");
+            menu_anchor_07.classList.remove("nav-item-active");
         }
     });
 },
@@ -93,10 +103,55 @@ const section5_observer = new IntersectionObserver(function (
             return;
         } else {
             menu_anchor_05.classList.add("nav-item-active");
+
             menu_anchor_01.classList.remove("nav-item-active");
             menu_anchor_02.classList.remove("nav-item-active");
             menu_anchor_03.classList.remove("nav-item-active");
             menu_anchor_04.classList.remove("nav-item-active");
+            menu_anchor_06.classList.remove("nav-item-active");
+            menu_anchor_07.classList.remove("nav-item-active");
+        }
+    });
+},
+options);
+
+const section6_observer = new IntersectionObserver(function (
+    entries,
+    section6_observer
+) {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            menu_anchor_06.classList.add("nav-item-active");
+
+            menu_anchor_01.classList.remove("nav-item-active");
+            menu_anchor_02.classList.remove("nav-item-active");
+            menu_anchor_03.classList.remove("nav-item-active");
+            menu_anchor_04.classList.remove("nav-item-active");
+            menu_anchor_05.classList.remove("nav-item-active");
+            menu_anchor_07.classList.remove("nav-item-active");
+        }
+    });
+},
+options);
+
+const section7_observer = new IntersectionObserver(function (
+    entries,
+    section7_observer
+) {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            menu_anchor_07.classList.add("nav-item-active");
+
+            menu_anchor_01.classList.remove("nav-item-active");
+            menu_anchor_02.classList.remove("nav-item-active");
+            menu_anchor_03.classList.remove("nav-item-active");
+            menu_anchor_04.classList.remove("nav-item-active");
+            menu_anchor_05.classList.remove("nav-item-active");
+            menu_anchor_06.classList.remove("nav-item-active");
         }
     });
 },
@@ -107,3 +162,5 @@ section2_observer.observe(sections[1]);
 section3_observer.observe(sections[2]);
 section4_observer.observe(sections[3]);
 section5_observer.observe(sections[4]);
+section6_observer.observe(sections[5]);
+section7_observer.observe(sections[6]);

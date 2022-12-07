@@ -278,7 +278,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    max-width: 50%;
+    width: 80%;
     height: 100%;
 }
 
@@ -297,7 +297,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
