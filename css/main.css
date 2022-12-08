@@ -595,21 +595,26 @@ section {
 
     position: absolute;
 
-    width: 33vw;
-    height: auto;
+    top: 0;
+    left: var(--main-nav-height);
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .section-text h1,
 .section-text h2 {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    margin-left: var(--main-nav-height);
-
     color: white;
-    width: 100%;
+    width: auto;
     height: auto;
+
+    flex-shrink: 0;
 }
 
 .section-text h1 {
@@ -739,11 +744,6 @@ section {
 .section-001-class {
     border-radius: 20px;
     overflow: hidden;
-}
-
-.header-text {
-    top: 10vh;
-    left: 0;
 }
 
 .section-001-class .video-container {
@@ -1225,11 +1225,24 @@ section {
 }
 
 .solution-text {
-    top: 10vh;
-    left: 5vw;
+    z-index: 3;
     text-align: left;
 
-    width: 33vw;
+    position: absolute;
+
+    top: 0;
+    left: var(--main-nav-height);
+
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: left;
 }
 
 .solution-text a {
@@ -1422,8 +1435,8 @@ section {
 
 .form-container {
     position: absolute;
-    top: 25vh;
-    right: 10vw;
+    top: 0;
+    right: 15vh;
 
     display: flex;
     flex-direction: column;
@@ -1432,8 +1445,8 @@ section {
     align-content: center;
     justify-content: center;
 
-    height: 50%;
-    width: 30vw;
+    height: 100%;
+    width: 35%;
 }
 
 form {
@@ -1445,7 +1458,7 @@ form {
     justify-content: center;
 
     width: 100%;
-    height: 100%;
+    height: 40%;
 }
 
 form > * {
@@ -1472,7 +1485,8 @@ form button {
     border-radius: 0 0 10px 10px;
     color: var(--color-tertiary);
     background-color: white;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 16px;
 
     transition: transform 0.2s ease-in-out, border-radius 0.2s ease-in-out;
 }
@@ -1532,7 +1546,7 @@ form option {
 }
 
 .contato-whats p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
 
     text-transform: none;
