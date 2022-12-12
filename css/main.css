@@ -421,6 +421,10 @@ body {
     font-weight: 200;
 }
 
+.alt-logo-text {
+    display: none;
+}
+
 /* Menu Div */
 .menu-div {
     width: 25%;
@@ -802,6 +806,7 @@ section {
     left: 0;
 
     width: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: row;
@@ -1257,6 +1262,7 @@ section {
 .solution-text h2 {
     margin-block: 1vh;
     position: relative;
+    color: blueviolet;
 }
 
 .solution-text h2::before,
@@ -1283,7 +1289,7 @@ section {
 }
 
 .solution-active h2 {
-    color: blueviolet;
+    color: blueviolet !important;
     opacity: 100% !important;
 }
 
@@ -1690,6 +1696,7 @@ footer {
 
     .nav-container {
         justify-content: space-around;
+        padding-inline: 1vw;
     }
 
     .logo-container {
@@ -1700,8 +1707,23 @@ footer {
         font-size: 24px;
     }
 
-    .menu-balancer {
+    .logo-text {
         display: none;
+    }
+
+    .alt-logo-text {
+        display: block;
+
+        margin-inline: 1vw;
+        color: white;
+        font-size: 20px;
+        font-weight: 200;
+
+        text-align: center;
+    }
+
+    .menu-div {
+        width: auto;
     }
 
     .lang-selector {
@@ -1725,16 +1747,18 @@ footer {
         scroll-behavior: smooth;
         scroll-margin-block: var(--main-nav-height) 0;
         scroll-snap-align: center;
+
+        flex-direction: column;
     }
 
     .section-text {
         z-index: 3;
         text-align: left;
 
-        position: absolute;
+        position: static;
 
         top: 0;
-        left: var(--main-nav-height);
+        left: 0;
 
         width: 100%;
         height: 100%;
@@ -1742,34 +1766,36 @@ footer {
         display: flex;
         flex-direction: column;
 
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     .section-text h1 {
-        font-size: 10vh;
+        font-size: 15vw;
         font-weight: 700;
         color: white;
     }
 
     .section-text h2 {
-        font-size: 3vh;
+        font-size: 5vw;
         font-weight: 700;
         color: white;
     }
 
-    .product-text {
-        z-index: 3;
-        top: 0;
-        left: 0;
+    .header-text {
+        position: absolute;
+    }
 
+    .product-text {
+        height: auto;
         width: 100%;
 
-        display: flex;
-        flex-direction: column;
-
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        text-align: center;
+
+        left: 0;
     }
 
     .product-text h1 {
@@ -1778,19 +1804,19 @@ footer {
 
     .product-text h2 {
         margin: 0;
-        font-size: 24px;
     }
 
     .product-container {
         width: 100%;
-        top: 15%;
+        height: 95%;
+        top: 1vh;
         right: auto;
         left: auto;
     }
 
     .product-card {
         width: var(--card-width-mobile);
-        height: 95%;
+        height: 90%;
 
         margin-block: 1vw;
         margin-inline: 1vw;
@@ -1864,6 +1890,21 @@ footer {
         object-fit: cover;
     }
 
+    .solution-text {
+        position: absolute;
+        align-items: flex-start;
+        padding-left: var(--main-nav-height);
+    }
+
+    .solution-text h2:hover::before,
+    .solution-text h2:focus::before {
+        width: 100px;
+    }
+
+    .solution-active h2::before {
+        width: 100px !important;
+    }
+
     .scroll1 {
         top: 5vh;
     }
@@ -1904,15 +1945,80 @@ footer {
         }
     }
 
-    .contact-text {
-        top: 10vh;
+    .contato-text {
+        position: static;
+
+        height: auto;
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    form {
+        height: auto;
+    }
+
+    .contato-whats {
+        padding: 5vw;
+    }
+
+    .contato-whats svg {
+        margin-right: 5vw;
+    }
+
+    .faq-text {
+        height: auto;
     }
 
     .form-container {
+        position: static;
+
         width: 80vw;
         height: 70%;
+    }
 
-        top: 22.5vh;
+    .faq-content {
+        position: static;
+
+        width: 100%;
+        height: auto;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+        overflow: hidden;
+
+        margin-top: 2vh;
+    }
+
+    .accordion-wrapper {
+        position: static;
+
+        top: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+
+        height: 100%;
+        width: 100%;
+
+        color: white;
+
+        overflow-y: scroll;
+    }
+
+    .accordion-wrapper .container {
+        position: static;
     }
 
     footer {
