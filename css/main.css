@@ -584,6 +584,7 @@ section {
     width: 100%;
     height: var(--viewport-height);
 
+    margin-top: var(--main-nav-height);
     margin-bottom: var(--main-nav-height);
 
     scroll-behavior: smooth;
