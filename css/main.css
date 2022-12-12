@@ -1025,11 +1025,18 @@ section {
 
 .product-card-front {
     background-color: var(--color-tertiary-light);
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+.front-robios {
+    justify-content: center !important;
 }
 
 .product-info {
     position: absolute;
-    top: 4vh;
+    top: 2vh;
 
     text-align: center;
     color: white;
@@ -1044,6 +1051,25 @@ section {
     font-size: 24px;
     font-weight: 200;
     opacity: 60%;
+
+    margin-top: -1vh;
+}
+
+.product-card-front img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+.product-img-robo {
+    width: auto !important;
+    height: 95% !important;
+    transform: translateY(15px);
+}
+
+.img-torta {
+    transform: translateY(15px) translateX(-12px);
 }
 
 .product-card-front button {
@@ -1215,28 +1241,6 @@ section {
     background-color: var(--color-green-light) !important;
     color: white !important;
     border: none;
-}
-
-.product-card img {
-    width: 90%;
-    height: 85%;
-
-    margin-top: 15%;
-
-    object-fit: cover;
-}
-
-.p-card-1 img {
-    margin-top: 40%;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: cover;
-}
-
-.robios-go-img {
-    transform: translateX(-15px);
 }
 
 .card-active {
@@ -1890,24 +1894,8 @@ footer {
         border-radius: 10px;
     }
 
-    .product-card-front,
-    .product-card-back {
-        position: absolute;
-
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-
-        justify-content: flex-start;
-        justify-items: center;
-        align-items: center;
-
-        backface-visibility: hidden;
-        overflow: hidden;
-
-        border-radius: 10px;
+    .product-card-front {
+        justify-content: center;
     }
 
     .product-card-back {
