@@ -5,6 +5,8 @@
     --color-secondary: rgb(223, 134, 231);
     --color-tertiary: rgb(5, 20, 80);
 
+    --color-green-light: rgb(83, 193, 83);
+
     --color-tertiary-light: rgb(102, 102, 229);
     --color-tertiary-faded: rgba(5, 20, 80, 0.502);
 
@@ -1121,8 +1123,18 @@ section {
 
 .product-card-back ul {
     width: 100%;
-    height: 50%;
+    max-height: 50%;
     overflow-y: scroll;
+
+    margin-bottom: 8vh;
+}
+
+.product-card-back ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+.product-card-back ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
 }
 
 .product-card-back li {
@@ -1140,11 +1152,13 @@ section {
     justify-content: flex-start;
 }
 
-.product-card-back li img {
+.product-card-back li svg {
     margin: 0;
     margin-right: 1vw;
-    height: 40px;
+    height: 48px;
     width: auto;
+
+    fill: var(--color-tertiary-light);
 }
 
 .product-btn-wrapper {
@@ -1166,7 +1180,7 @@ section {
 .product-card-back a {
     position: relative;
     width: 40%;
-    height: 5vh;
+    height: 4vh;
 
     display: flex;
     flex-direction: row;
@@ -1177,20 +1191,30 @@ section {
     border: 1px solid var(--color-tertiary);
     color: var(--color-tertiary);
 
-    font-size: 20px;
+    font-size: 18px;
 
     border-radius: 10px;
+
+    transition: background-color 0.2s ease-in-out;
 }
 
 .btn-flip-back:hover {
     cursor: pointer;
     background-color: var(--color-tertiary-light) !important;
     color: white !important;
+    border: none;
+}
+
+.btn-buy {
+    background-color: var(--color-secondary) !important;
+    color: white !important;
+    border: var(--color-secondary) !important;
 }
 
 .btn-buy:hover {
-    background-color: var(--color-secondary) !important;
+    background-color: var(--color-green-light) !important;
     color: white !important;
+    border: none;
 }
 
 .product-card img {
@@ -1849,9 +1873,8 @@ footer {
     .product-container {
         width: 100%;
         height: 95%;
-        top: 1vh;
-        right: auto;
-        left: auto;
+
+        justify-content: flex-start;
     }
 
     .product-card {
