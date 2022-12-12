@@ -8,6 +8,8 @@
     --color-tertiary-light: rgb(102, 102, 229);
     --color-tertiary-faded: rgba(5, 20, 80, 0.502);
 
+    --font-color-gray: rgb(48, 48, 48);
+
     --main-nav-height: 5vh;
     --secondary-nav-height: 90vh;
 
@@ -25,7 +27,7 @@
     --general-h-spacer: 1vw;
     --general-v-spacer: 1vh;
 
-    --card-width: 25vw;
+    --card-width: 27vw;
     --card-height: 50vh;
 
     --card-width-mobile: 80vw;
@@ -800,14 +802,16 @@ section {
 
 /* ==== Seção 2 ===== */
 
+.section-002-class {
+    flex-direction: column;
+}
+
 .product-text {
-    position: absolute;
-
-    top: 5%;
-    left: 0;
-
+    position: static;
     width: 100%;
     height: auto;
+
+    margin-top: 2vh;
 
     display: flex;
     flex-direction: row;
@@ -887,18 +891,14 @@ section {
 .product-container {
     z-index: 2;
 
-    position: absolute;
-    left: 10vw;
-    bottom: 0;
-
     display: flex;
     flex-direction: row;
 
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
 
-    width: calc((var(--card-width) + 2vw) * 3);
-    height: 80%;
+    width: 100%;
+    height: 100%;
 
     overflow-y: visible;
     overflow-x: scroll;
@@ -988,8 +988,7 @@ section {
     width: var(--card-width);
     height: 90%;
 
-    margin-block: 1vw;
-    margin-inline: 1vw;
+    margin: 1vw;
 
     scroll-snap-align: center;
     scroll-margin: 1vw;
@@ -1006,7 +1005,7 @@ section {
 .product-card-back {
     position: absolute;
 
-    width: var(--card-width);
+    width: 100%;
     height: 100%;
 
     display: flex;
@@ -1034,14 +1033,15 @@ section {
     color: white;
 }
 
-.product-card-front h2 {
+.product-info h2 {
     font-size: 48px;
     font-weight: 700;
 }
 
-.product-card-front h3 {
+.product-info h3 {
     font-size: 24px;
     font-weight: 200;
+    opacity: 60%;
 }
 
 .product-card-front button {
@@ -1083,6 +1083,7 @@ section {
     padding-inline: 45px;
 }
 
+/* Subtitulo da Parte de Trás */
 .product-card-back h3 {
     margin-top: 4vh;
     text-align: center;
@@ -1093,19 +1094,57 @@ section {
     margin-bottom: 2vh;
 }
 
-.product-card-back p {
+.product-card-back h4 {
+    margin-top: -3vh;
     text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--color-tertiary-light);
+
+    opacity: 60%;
+
     margin-bottom: 2vh;
 }
 
+/* Texto da Parte de Trás */
+.product-card-back p {
+    text-align: center;
+    margin-bottom: 2vh;
+
+    font-weight: 400;
+    font-size: 16px;
+
+    color: var(--font-color-gray);
+}
+
+/* Lista da Parte de Trás */
+
 .product-card-back ul {
-    width: 80%;
+    width: 100%;
+    height: 50%;
+    overflow-y: scroll;
 }
 
 .product-card-back li {
     margin-block: 0 1vh;
     font-size: 16px;
     font-weight: 200;
+
+    color: var(--color-tertiary-light);
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.product-card-back li img {
+    margin: 0;
+    margin-right: 1vw;
+    height: 40px;
+    width: auto;
 }
 
 .product-btn-wrapper {
