@@ -271,7 +271,7 @@ body {
     width: 100vw;
     height: var(--main-nav-height);
 
-    padding-inline: var(--main-nav-height);
+    padding-inline: 6vh;
 
     background-color: var(--color-tertiary);
 }
@@ -311,6 +311,8 @@ body {
     text-align: center;
     position: relative;
     margin-inline: 2vw;
+
+    font-size: 16px;
 }
 
 .nav-primary a::before,
@@ -422,8 +424,16 @@ body {
 .logo-text {
     margin-inline: 1vw;
     color: white;
-    font-size: clamp(1.5vw, 1.5vw, 3vw);
+    font-size: 22px;
     font-weight: 200;
+
+    transition: color 0.3s, font-size 0.3s, font-weight 0.3s;
+}
+
+.logo-text:hover {
+    color: var(--color-secondary);
+    font-size: 24px;
+    font-weight: 300;
 }
 
 .alt-logo-text {
@@ -642,8 +652,8 @@ section {
 .video-controller-container {
     z-index: 2;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    right: 4vh;
     width: 200px;
     height: 60px;
 
@@ -656,6 +666,8 @@ section {
 
     border-radius: 5px;
     padding: 10px;
+
+    opacity: 50%;
 }
 
 .video-controller-container button {
@@ -903,7 +915,9 @@ section {
     width: 100%;
     height: 100%;
 
-    overflow-y: visible;
+    /* Esse overflow mata o flipcard-effect, essa div está explodindo 
+    algo está maior do que pode */
+    overflow-y: hidden;
     overflow-x: scroll;
 
     scroll-snap-type: x mandatory;
@@ -1689,7 +1703,7 @@ footer {
 
     align-items: center;
     justify-content: space-between;
-    padding-inline: 5vh;
+    padding-inline: 6vh;
 
     width: 100vw;
     height: 5vh;
@@ -1740,6 +1754,10 @@ footer {
     height: 50%;
 
     fill: var(--color-tertiary);
+}
+
+.icone-whats {
+    background-color: var(--color-green-light) !important;
 }
 
 .direitos-reservados {
