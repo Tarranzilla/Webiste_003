@@ -2097,7 +2097,11 @@ footer {
 
     .solution-text {
         position: absolute;
+        top: 10%;
+        left: 0;
+
         align-items: flex-start;
+        justify-content: flex-start;
         padding-left: var(--main-nav-height);
     }
 
@@ -2108,6 +2112,10 @@ footer {
 
     .solution-active h2::before {
         width: 100px !important;
+    }
+
+    .solution-descriptions {
+        display: none;
     }
 
     .scroll1 {
