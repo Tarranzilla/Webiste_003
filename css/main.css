@@ -1322,6 +1322,14 @@ section {
     border-radius: 20px;
 }
 
+.solution-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .solution-text {
     z-index: 3;
     text-align: left;
@@ -1358,6 +1366,8 @@ section {
     fill: blueviolet;
     margin-right: 1vw;
     opacity: 60%;
+
+    flex-shrink: 0;
 }
 
 .solution-text a:hover,
@@ -1374,6 +1384,8 @@ section {
     margin-block: 1vh;
     position: relative;
     color: blueviolet;
+
+    width: auto !important;
 }
 
 .solution-text h2::before,
@@ -1395,7 +1407,7 @@ section {
 
 .solution-text h2:hover::before,
 .solution-text h2:focus::before {
-    width: 300px;
+    width: 12vw;
     transition: width 0.3s;
 }
 
@@ -1405,8 +1417,42 @@ section {
 }
 
 .solution-active h2::before {
-    width: 300px !important;
+    width: 12vw !important;
     transition: width 0.3s !important;
+}
+
+.main-solution-text {
+    width: 20vw;
+    height: auto;
+}
+
+.solution-descriptions {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 25vw;
+
+    margin-block: 2vh;
+    margin-left: 2vw;
+}
+
+.solution-descriptions p {
+    width: 100%;
+    height: auto;
+
+    color: white;
+    font-size: 1.2vw;
+
+    display: none;
+
+    text-align: left;
+}
+
+.description-active {
+    display: block !important;
 }
 
 .section-003-class .video-overlay {
@@ -1918,6 +1964,8 @@ footer {
         font-size: 5vw;
         font-weight: 700;
         color: white;
+
+        width: 90%;
     }
 
     .header-text {
