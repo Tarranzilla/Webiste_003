@@ -30,10 +30,11 @@
     --general-h-spacer: 1vw;
     --general-v-spacer: 1vh;
 
-    --card-width: 27vw;
+    --card-width: 30vw;
     --card-height: 50vh;
 
     --card-width-mobile: 80vw;
+    --card-width-fullscreen: 27vw;
 
     /* Experience Scrollers */
     --scroll-item-ammount: 10;
@@ -71,7 +72,6 @@
 a {
     list-style: none;
     text-decoration: none;
-    text-transform: uppercase;
 
     color: white;
 }
@@ -287,9 +287,14 @@ body {
     height: 100%;
 }
 
+.nav-item-active {
+    transition: color 0.3s ease-in-out;
+    color: var(--color-tertiary-light);
+}
+
 .nav-item-active::before {
     width: 100% !important;
-    transition: width 0.3s !important;
+    transition: width 0.3s ease-in-out !important;
     background-color: var(--color-tertiary-light) !important;
 }
 
@@ -310,9 +315,12 @@ body {
 .nav-secondary a {
     text-align: center;
     position: relative;
-    margin-inline: 2vw;
+    margin-inline: 1.2vw;
 
-    font-size: 16px;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+
+    height: 60%;
 }
 
 .nav-primary a::before,
@@ -326,8 +334,8 @@ body {
     right: auto;
 
     width: 0;
-    height: 6px;
-    background-color: var(--color-tertiary-faded);
+    height: 0.3vw;
+    background-color: white;
     transform-origin: center;
 
     transition: background-color 0.3s, width 0.3s;
@@ -424,7 +432,7 @@ body {
 .logo-text {
     margin-inline: 1vw;
     color: white;
-    font-size: 22px;
+    font-size: 1.4vw;
     font-weight: 200;
 
     transition: color 0.3s, font-size 0.3s, font-weight 0.3s;
@@ -432,8 +440,10 @@ body {
 
 .logo-text:hover {
     color: var(--color-secondary);
-    font-size: 24px;
+    font-size: 1.5vw;
     font-weight: 300;
+
+    cursor: pointer;
 }
 
 .alt-logo-text {
@@ -638,12 +648,12 @@ section {
 }
 
 .section-text h1 {
-    font-size: 20vh;
+    font-size: 10vw;
     font-weight: 700;
 }
 
 .section-text h2 {
-    font-size: 7vh;
+    font-size: 3vw;
     font-weight: 500;
 
     opacity: 60%;
@@ -910,7 +920,7 @@ section {
     flex-direction: row;
 
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
     width: 100%;
     height: 100%;
@@ -1005,10 +1015,11 @@ section {
     width: var(--card-width);
     height: 95%;
 
-    margin: 1vw;
+    margin-block: 1.5vw;
+    margin-inline: 0.5vw;
 
     scroll-snap-align: center;
-    scroll-margin: 1vw;
+    scroll-margin: 0.5vw;
 
     transform-style: preserve-3d;
     transition: transform 0.8s ease-in-out;
@@ -1058,12 +1069,12 @@ section {
 }
 
 .product-info h2 {
-    font-size: 48px;
+    font-size: 3vw;
     font-weight: 700;
 }
 
 .product-info h3 {
-    font-size: 24px;
+    font-size: 1.8vw;
     font-weight: 200;
     opacity: 60%;
 
@@ -1071,7 +1082,7 @@ section {
 }
 
 .product-card-front img {
-    width: 100%;
+    width: 80%;
     height: auto;
 
     object-fit: cover;
@@ -1079,12 +1090,11 @@ section {
 
 .product-img-robo {
     width: auto !important;
-    height: 95% !important;
-    transform: translateY(15px);
+    height: 90% !important;
 }
 
 .img-torta {
-    transform: translateY(15px) translateX(-12px);
+    transform: translateX(-12px);
 }
 
 .product-card-front button {
@@ -1504,29 +1514,11 @@ section {
 }
 
 /* ===== Seção 5 ===== */
-
-.contact-text {
-    top: 20vh;
-    left: 5vw;
-    text-align: left;
-
-    width: 40vw;
-}
-
-.contact-text h1 {
-    margin: 0;
-}
-
-.contact-text h2 {
-    margin: 0;
-    opacity: 60%;
+.contato-text {
+    position: static;
 }
 
 .form-container {
-    position: absolute;
-    top: 0;
-    right: 15vh;
-
     display: flex;
     flex-direction: column;
 
@@ -1654,11 +1646,7 @@ form option {
 
 /* ===== Seção 7 ===== */
 
-.accordion-wrapper {
-    position: absolute;
-    top: 27.5vh;
-    right: 10vw;
-
+.faq-content {
     display: flex;
     flex-direction: column;
 
@@ -1666,8 +1654,27 @@ form option {
     align-content: center;
     justify-content: center;
 
-    height: 50%;
-    width: 40vw;
+    width: auto;
+    height: 100%;
+}
+
+.faq-text {
+    position: static;
+    width: 40%;
+}
+
+.accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
+    overflow-y: scroll;
+
+    height: auto;
+    width: 45vw;
 
     color: white;
 }
@@ -1681,7 +1688,6 @@ form option {
 }
 
 .accordion-wrapper .container {
-    position: relative;
     margin: 10px 10px;
 }
 
@@ -1774,6 +1780,12 @@ footer {
 }
 
 /* ===== Media Queries ==== */
+@media screen and (min-width: 1500px) {
+    .nav-primary a,
+    .nav-secondary a {
+        font-size: 1vw;
+    }
+}
 
 @media screen and (max-width: 1000px) {
     .body-overflow {
