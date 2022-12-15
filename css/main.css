@@ -1344,12 +1344,30 @@ section {
 }
 
 .solution-text a {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
     text-transform: capitalize;
 }
 
-.solution-text h2:hover,
-.solution-text h2:focus {
+.solution-text svg {
+    fill: blueviolet;
+    margin-right: 1vw;
+    opacity: 60%;
+}
+
+.solution-text a:hover,
+.solution-text a:focus {
     color: blueviolet;
+}
+
+.solution-text a:hover svg,
+.solution-text a:focus svg {
+    opacity: 100%;
 }
 
 .solution-text h2 {
@@ -1674,7 +1692,7 @@ form option {
     overflow-y: scroll;
 
     height: auto;
-    width: 45vw;
+    width: 50vw;
 
     color: white;
 }
