@@ -2,8 +2,8 @@ const world = Globe({})(document.getElementById("globe-container"))
     .width("1000")
     .height("1000")
     .backgroundColor("#00000000")
-    .globeImageUrl("//unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
-    .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
+    .globeImageUrl("assets/imgs/globe/earth-blue-marble.jpg")
+    .bumpImageUrl("assets/imgs/globe/earth-topology.png")
     .pointsData([])
     .pointColor("color");
 
