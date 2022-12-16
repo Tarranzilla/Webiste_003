@@ -22,6 +22,7 @@
         <link rel="apple-touch-icon" href="logo/apple-icon-180.png">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
+        <!-- Estas imagens precisam ser recriadas, e também alteradas no manifest.json -->
         <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
         <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
         <link rel="apple-touch-startup-image" href="assets/idv/logo/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -75,34 +76,14 @@
 
         <!-- CSS Principal -->
         <link rel="stylesheet" href="css/main.css" />
-        </script>
 
         <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-        <!-- Bootstrap core CSS e JS 
-        
-                    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-
-        -->
 
         <!-- ThreeJs e Globe 
         <script src="//unpkg.com/three"></script>
         <script src="//unpkg.com/globe.gl"></script>
         -->
-
-        <!-- Popper JS Production version -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-
-        <!-- Jquery Fit Text -->
-        <script src="js/jquery.fittext.js"></script>
-
-        <!-- CSS Nativo -->
-        <link href="css/main.css" rel="stylesheet" />
 
         <!-- Fontes do Google -->
         <link
@@ -117,6 +98,7 @@
         <script defer src="js/observers.js"></script>
     </head>
     <body class="body-overflow">
+
         <!-- PWA Loader -->
         <script>
             // Don't register the service worker
@@ -136,7 +118,7 @@
             console.error('Service workers are not supported.');
             }
             });
-          </script>
+        </script>
 
         <!-- Carregador de Página -->
         <div class="loader-wrapper">
