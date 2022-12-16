@@ -50,7 +50,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
+    cursor: grab;
 }
 
 ::-webkit-scrollbar-track {
@@ -1009,6 +1009,7 @@ section {
 
 .product-card {
     position: relative;
+    cursor: grab;
 
     flex-shrink: 0;
 
