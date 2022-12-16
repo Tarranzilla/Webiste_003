@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Tarranzilla/Webiste_003#readme",
   "dependencies": {
     "jquery": "^3.6.2",
-    "typed.js": "^2.0.12"
+    "typed.js": "^2.0.12",
+    "universalsmoothscroll": "^6.1.0"
   }
 }
