@@ -1,6 +1,3 @@
-import ThreeGlobe from "three-globe";
-import * as THREE from "three";
-
 const world = ThreeGlobe({})(document.getElementById("globe-container"))
     .width("1000")
     .height("1000")
