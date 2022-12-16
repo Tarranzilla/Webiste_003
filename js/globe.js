@@ -1,4 +1,4 @@
-const world = ThreeGlobe({})(document.getElementById("globe-container"))
+const world = Globe({})(document.getElementById("globe-container"))
     .width("1000")
     .height("1000")
     .backgroundColor("#00000000")
